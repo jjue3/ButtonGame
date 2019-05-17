@@ -66,6 +66,18 @@ td{
     /* border: 1px solid red; */
 }
 
+.container h2{
+    margin: 5px;
+}
+
+.error{
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 25px;
+}
+
 .containerSignup{
     width: 300px;
     height: auto;

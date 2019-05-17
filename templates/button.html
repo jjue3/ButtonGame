@@ -17,10 +17,17 @@
         </div>
 
         <div class="container">
-            <p>Your points = {{points}}</p>
+            <h3>Your points = {{points}}</h3>
             <form action="/button" method="POST">
                 <input type="submit" value="Click Me for Points!">
             </form>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+                <div class="{{ category }}">{{ message }}</div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
             <h2>Leaderboard</h2>
             <table>
                 <thead>

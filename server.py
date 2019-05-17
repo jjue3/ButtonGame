@@ -141,8 +141,37 @@ def gainLoss():
         "user_id" : session['id'],
         "points" : session['points']
         }
-    mysql.query_db(query, data)    
-    return redirect('/button')
+    mysql.query_db(query, data)
+    if session['points'] > 100 and session['points']<120:
+        flash('Good job you made it over 100 points!', 'error')    
+        return redirect('/button')
+    if session['points'] > 500 and session['points']<520:
+        flash('Good job you made it over 500 points!', 'error')    
+        return redirect('/button')
+    if session['points'] > 1000 and session['points']<1020:
+        flash('Good job you made it over 1000 points!', 'error')    
+        return redirect('/button')
+    if session['points'] > 1500 and session['points']<1520:
+        flash('Good job you made it over 1500 points!', 'error')    
+        return redirect('/button')
+    if session['points'] > 2000 and session['points']<2020:
+        flash('Good job you made it over 2000 points!', 'error')    
+        return redirect('/button')
+    if session['points'] > 2500 and session['points']<2520:
+        flash('Good job you made it over 2500 points!', 'error')    
+        return redirect('/button')
+    if session['points'] > 3000 and session['points']<3020:
+        flash('Good job you made it over 3000 points!', 'error')    
+        return redirect('/button')
+    if session['points'] > 3500 and session['points']<3520:
+        flash('Good job you made it over 3500 points!', 'error')
+        return redirect('/button') 
+    #This is for testing the Flash Message    
+    # if session['points'] > 1:
+    #     flash('Good job you made it over test points!', 'error')
+    #     return redirect('/button')       
+    else:
+        return redirect('/button')    
 
 #Comments Section for writing comments
 @app.route('/comment/create', methods= ['POST'])  
