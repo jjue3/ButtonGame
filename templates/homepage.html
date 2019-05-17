@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Home page</title>
+</head>
+<body>
+    <div class= "wrapper">
+        <div class= "leaderboardContainer">
+            <h1>Welcome to the Button Game!</h1>
+            <div class= "signInsignUp">
+                <form action="/signup">
+                    <input type="submit" value="Sign up!">
+                </form>
+                <h2>OR</h2>
+                <form action="/login">
+                    <input type="submit" value="Log in!">
+                </form> 
+                <h2>To Join The Ranks!</h2> 
+            </div>
+            <h2>Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Username</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                {% for points in total_points %}
+                <tbody>
+                    <tr>
+                        <td>{{loop.index}}</td>
+                        <td>{{points.username}}</td>
+                        <td>{{points.points}}</td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>

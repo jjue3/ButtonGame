@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Sign up</title>
+</head>
+<body>
+    <div class= "wrapper">
+            <div class= "topbar">
+                <a href="/">Homepage</a>
+            </div>
+        <div class= "containerSignup">
+            <form action='/signup' method="POST">
+                <h3>Register</h3>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+                <p>Username <input type="text" name='username'></p>
+                <p>Password <input type="text" name='password'></p>
+                <p>Confirm Password <input type="text" name='confirm_pw'></p>
+                <input type="submit" value="Register">
+            </form>
+            <br>
+            <a href="/login">Already have an account? Click Here!</a>
+        </div>
+        <div class= "containerSignup">
+            <h4>Password Requirements:</h4>
+            <p>Must contain at least 4 - 24 characters</p>
+            <p>Must contain at least one number</p> 
+            <p>Must contain one of these special characters</p> 
+            <p>!@#$%^&*</p>  
+        </div>
+        
+    </div>
+</body>
+</html>

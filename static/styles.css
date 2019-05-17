@@ -1,0 +1,107 @@
+.wrapper{
+    width: 800px;
+    height: auto;
+    /* border: 1px solid red; */
+    padding: 10px; 
+    background: rgb(180, 246, 255);
+}
+
+.leaderboardContainer{
+    width: 600px;
+    height: auto;
+    text-align: center;
+    display: inline-block;
+    /* border: 1px solid red; */
+}
+
+.topbar{
+    width: 800px;
+    height: auto;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.topbar h3{
+    display: inline-block;
+    margin: 0px;
+}
+
+.topbar a{
+    float: right;
+}
+
+.commentsContainer{
+    vertical-align: top;
+    width: 250px;
+    height: auto;
+    /* border: 1px solid red; */
+    display: inline-block;
+}
+
+.commentsContainer table{
+    display: inline-block;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.commentsContainer td{
+  border: 1px solid black;
+  vertical-align: top;
+  padding:5px;
+}
+
+tr:nth-child(even) td { background: rgb(209, 209, 209); } 
+tr:nth-child(odd) td { background: #FEFEFE; } 
+
+td{
+    background: #fafafa;
+}
+
+.container{
+    width: 500px;
+    height: auto;
+    text-align: center;
+    display: inline-block;
+    /* border: 1px solid red; */
+}
+
+.containerSignup{
+    width: 300px;
+    height: auto;
+    vertical-align: top;
+    display: inline-block;    
+    margin-right: 20px;
+    /* border: 1px solid red; */
+}
+
+.signInsignUp{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    /* border: 1px solid red; */
+}
+
+table{
+    display: inline-block;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th {
+  border: 1px solid black;
+  vertical-align: top;
+  padding: 5px;
+}
+
+th {
+    background: #aaaaaa;
+    font-weight: bold;
+}
+
+tr:nth-child(even) td { background: rgb(209, 209, 209); } 
+tr:nth-child(odd) td { background: #FEFEFE; } 
+
+td{
+    background: #fafafa;
+}
