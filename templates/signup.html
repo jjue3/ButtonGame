@@ -23,8 +23,8 @@
                 {% endif %}
                 {% endwith %}
                 <p>Username <input type="text" name='username'></p>
-                <p>Password <input type="text" name='password'></p>
-                <p>Confirm Password <input type="text" name='confirm_pw'></p>
+                <p>Password <input type="password" name='password' id='mypassword'></p>
+                <p>Confirm Password <input type="password" name='confirm_pw' id='mypassword'></p>
                 <input type="submit" value="Register">
             </form>
             <br>
@@ -33,7 +33,7 @@
         <div class= "containerSignup">
             <h4>Password Requirements:</h4>
             <p>Must contain at least 4 - 24 characters</p>
-            <p>Must contain at least one number</p> 
+            <p>Must contain at least one number & one capital</p> 
             <p>Must contain one of these special characters</p> 
             <p>!@#$%^&*</p>  
         </div>
